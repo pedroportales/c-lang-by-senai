@@ -9,12 +9,14 @@ void vetorDe10Valores(){
     int valores[10];
 
     for(int i = 0; i < 10; i++){
-        printf("Digite o %dº número: ");
+        printf("Digite o %dº número: ", i+1);
         scanf("%d", &valores[i]);
     }
 
+    printf("\n");
+
     for(int i = 0; i < 10; i++){
-        printf("O %dº valor é: %d\n", i, valores[i]);
+        printf("O %dº valor é: %d\n", i+1, valores[i]);
     }
 
     printf("\n\n");
@@ -29,7 +31,7 @@ void NumerosPares(){
     int valores[10], pares = 0;
 
     for(int i = 0; i < 10; i++){
-        printf("Digite o %dº número: ");
+        printf("Digite o %dº número: ", i+1);
         scanf("%d", &valores[i]);
 
         if(valores[i] % 2 == 0){
@@ -50,7 +52,7 @@ void somaDosImpares(){
     printf("\n\n");
 
     for(int i = 0; i < 6; i++){
-        printf("Digite o %dº número: ");
+        printf("Digite o %dº número: ", i+1);
         scanf("%d", &valores[i]);
 
         if(valores[i] % 2 != 0){
@@ -69,7 +71,7 @@ void posicaoDosPares(){
     printf("\n\n");
 
     for(int i = 0; i < 20; i++){
-        printf("Digite o %dº número: ");
+        printf("Digite o %dº número: ", i+1);
         scanf("%d", &valores[i]);
 
         if(valores[i] % 2 == 0){
@@ -85,10 +87,10 @@ int main(void){
     
     while(i != 5){
         printf("----- MENU -----\n");
-        printf("(1) Contar de 1 a 100\n");
-        printf("(2) Contar de 1 a 100 e emitir uma mensagem a cada múltiplo de 10\n");
-        printf("(3) Ler números entre 1 a 10\n");
-        printf("(4) Ler número até que ele seja 0\n");
+        printf("(1) Vetor de 10 valores\n");
+        printf("(2) Números pares\n");
+        printf("(3) Soma dos ímpares\n");
+        printf("(4) Posição dos pares\n");
         printf("(5) Sair do programa\n");
         printf("Escolha uma opção: ");
         scanf("%d", &i);
