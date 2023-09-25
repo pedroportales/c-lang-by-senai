@@ -66,6 +66,7 @@ void somaDosImpares(){
 }
 
 void posicaoDosPares(){
+    /* Elabore um algoritmo que leia um vetor de 20 posições e mostre a posição dos números pares */
     int valores[20];
 
     printf("\n\n");
