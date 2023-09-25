@@ -4,7 +4,7 @@
 void vetorDe10Valores(){
     /* Elabore um algoritmo que guarde 10 valores inteiros em um vetor */
 
-    printf("\n\n");
+    printf("\n\n");    
 
     int valores[10];
 
