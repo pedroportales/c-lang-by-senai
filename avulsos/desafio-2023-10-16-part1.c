@@ -28,10 +28,8 @@ void adicionarPessoas(){ // Função para preencher o vetor
         pessoa[i].nome[strcspn(pessoa[i].nome, "\n")] = 0;
         printf("Insira a idade da pessoa: ");
         scanf("%d", &pessoa[i].idade);
-        setbuf(stdin, NULL);
         printf("Insira o sexo da pessoa (M/F): ");
-        scanf("%c", &pessoa[i].sexo);
-        setbuf(stdin, NULL);
+        scanf(" %c", &pessoa[i].sexo);
         printf("Insira a altura da pessoa: ");
         scanf("%f", &pessoa[i].altura);
         setbuf(stdin, NULL);
