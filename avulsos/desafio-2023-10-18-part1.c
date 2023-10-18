@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+//#include <windows.h>
 #define TAM 3
 
 /*
@@ -33,6 +34,7 @@ void cadastrarAlunos(struct Aluno aluno[]){ // Função para preencher o vetor
         scanf("%d", &aluno[i].idade);
         printf("Insira o sexo do aluno (M/F): ");
         scanf(" %c", &aluno[i].sexo);
+        //system("cls");
         system("clear");
     }
 
@@ -42,8 +44,8 @@ void cadastrarAlunos(struct Aluno aluno[]){ // Função para preencher o vetor
 int maioresQue10(struct Aluno aluno[]){
     int qtd = 0;
 
-    for (int i = 0; i > TAM; i++){
-        if (aluno[i].idade > 10){
+    for(int i = 0; i < TAM; i++){
+        if(aluno[i].idade > 10){
             qtd++;
         }
     }
@@ -51,7 +53,7 @@ int maioresQue10(struct Aluno aluno[]){
     return qtd;
 }
 
-int menor(){
+int menor(struct Aluno aluno[]){
     int menorIdade = 1000;
     int indice;
 
@@ -65,7 +67,7 @@ int menor(){
     return indice;
 }
 
-void parImpar(){
+void parImpar(struct Aluno aluno[]){
     printf("\n---- ALUNOS COM IDADE PAR ----\n\n");
     for (int i = 0; i < TAM; i++){ 
         if (aluno[i].idade % 2 == 0){
@@ -88,7 +90,7 @@ void parImpar(){
     }
 }
 
-int maiorQueNum(int num){
+int maiorQueNum(struct Aluno aluno[], int num){
     int qtdMaiorQueNum = 0;
 
     for (int i = 0; i < TAM; i++){ 
@@ -101,9 +103,9 @@ int maiorQueNum(int num){
 }
 
 int main(){
-    int id, option, numero, maioresQuenumero;
+    int id, option, numero;
 
-    for (int i = 0; i < 5; i++){ // Inicializando vetores da estrutura
+    for (int i = 0; i < TAM; i++){ // Inicializando vetores da estrutura
         strcpy(aluno[i].nome, "NULL");
         aluno[i].idade = 0;
         aluno[i].sexo = '0';
@@ -111,10 +113,9 @@ int main(){
 
     cadastrarAlunos(aluno);
     printf("%d aluno com idade maior que 10\n", maioresQue10(aluno));
-    printf("O aluno mais novo é %s\n", aluno[menor()].nome);
-    parImpar();
+    printf("O aluno mais novo é %s\n", aluno[menor(aluno)].nome);
+    parImpar(aluno);
     printf("Insira um número inteiro: ");
     scanf("%d", &numero);
-    maioresQuenumero = maiorQueNum(numero);
-    printf("A quantidade de alunos com idade maior que o número dito são: %d\n\n", maioresQuenumero);
+    printf("A quantidade de alunos com idade maior que o número dito são: %d\n\n", maiorQueNum(aluno, numero));
 }
