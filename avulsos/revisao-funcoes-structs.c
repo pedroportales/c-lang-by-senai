@@ -12,8 +12,21 @@ struct Aluno {
 void preencherAluno(){
     
     setbuf(stdin, NULL);
-    printf("Insira o número de matrícula do aluno: ");
-    scanf("%d", &aluno.matricula);
+    
+    while (true){
+        printf("Insira o número de matrícula do aluno: ");
+        scanf("%d", &aluno.matricula);
+
+        if (aluno.nota < 0) {
+            printf("Valor inválido! Insira um valor entre 0 e 10!\n");
+            system("sleep 3");
+            system("clear");
+        } else {
+            system("clear");
+            break;
+        }
+    }
+
     system("clear");
     setbuf(stdin, NULL);
     printf("Insira o nome do aluno: ");
