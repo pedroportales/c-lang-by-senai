@@ -27,7 +27,6 @@ void preencherAluno(){
         }
     }
 
-    system("clear");
     setbuf(stdin, NULL);
     printf("Insira o nome do aluno: ");
     fgets(aluno.nome, sizeof(aluno.nome), stdin);
