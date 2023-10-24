@@ -17,7 +17,7 @@ void preencherAluno(){
         printf("Insira o número de matrícula do aluno: ");
         scanf("%d", &aluno.matricula);
 
-        if (aluno.nota < 0) {
+        if (aluno.matricula < 0) {
             printf("Valor inválido! Insira um valor positivo para a matrícula!\n");
             system("sleep 3");
             system("clear");
