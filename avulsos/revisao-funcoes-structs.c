@@ -18,7 +18,7 @@ void preencherAluno(){
         scanf("%d", &aluno.matricula);
 
         if (aluno.nota < 0) {
-            printf("Valor inválido! Insira um valor entre 0 e 10!\n");
+            printf("Valor inválido! Insira um valor positivo para a matrícula!\n");
             system("sleep 3");
             system("clear");
         } else {
